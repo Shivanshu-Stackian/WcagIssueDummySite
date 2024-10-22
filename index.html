@@ -11,7 +11,7 @@
             color: black;
         }
         a {
-            color: blue; /* Low contrast with background */
+            color: #00f; /* Low contrast with background */
         }
         h1 {
             font-size: 2em;
@@ -26,9 +26,11 @@
             background-color: red; /* Low contrast */
             color: white;
         }
-        /* Example of inconsistent identification */
         .nav-link {
             font-size: 1.2em; /* Inconsistent font size */
+        }
+        .content {
+            color: #aaa; /* Low contrast text */
         }
     </style>
 </head>
@@ -73,7 +75,7 @@
             <h2>Our Services</h2>
             <p>We offer various services to help you succeed.</p>
             <ul>
-                <li><span>Consulting</span></li> <!-- No meaningful content -->
+                <li><span>Consulting</span></li> <!-- Non-semantic use -->
                 <li><span>Development</span></li>
             </ul>
         </section>
@@ -89,7 +91,7 @@
             <h2>Non-Text Content</h2>
             <img src="image.jpg" alt=""> <!-- Missing alt text -->
             <p>Below is a decorative image:</p>
-            <img src="decorative.jpg" alt=""/> <!-- Decorative image, but still missing alt text -->
+            <img src="decorative.jpg" alt=""/> <!-- Missing alt text for decorative image -->
         </section>
 
         <section>
@@ -103,6 +105,17 @@
             <a href="#">Twitter</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a> <!-- Lack of context for links -->
+        </section>
+
+        <section>
+            <h2>Input Purpose</h2>
+            <p>We need your feedback:</p>
+            <input type="text" id="feedback" name="feedback" placeholder="Your feedback"> <!-- Lacks context -->
+        </section>
+
+        <section>
+            <h2>Resize Text</h2>
+            <p style="font-size: 8em;">This text is too large for resizing.</p> <!-- Text cannot be resized properly -->
         </section>
     </main>
 
