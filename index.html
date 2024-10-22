@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Accessibility Issues Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        a {
+            color: blue; /* Low contrast with background */
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .hidden {
+            display: none; /* Important content hidden from screen readers */
+        }
+        button {
+            background-color: red; /* Low contrast button */
+            color: white; /* Low contrast with background */
+        }
+        img {
+            max-width: 100%; /* Responsive but missing alt */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Sample Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>This is the home section of our site. We are excited to share our content with you!</p>
+            <img src="image.jpg" alt=""> <!-- Missing alt text -->
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p class="hidden">This text is not accessible to screen readers.</p>
+            <p>We are dedicated to providing great resources.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer various services to help you succeed.</p>
+            <ul>
+                <li><span>Consulting</span> <!-- No semantic element or link -->
+                <li><span>Development</span></li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="text-only">
+            <h2 id="text-only">Text-Only Section</h2>
+            <p>This section is purely text with no headings.</p>
+        </section>
+
+        <button>Click Me</button> <!-- Low contrast button -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sample Site</p>
+    </footer>
+</body>
+</html>
