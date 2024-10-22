@@ -16,15 +16,19 @@
         h1 {
             font-size: 2em;
         }
+        img {
+            width: 100%; /* Missing alt text */
+        }
         .hidden {
             display: none; /* Important content hidden from screen readers */
         }
         button {
-            background-color: red; /* Low contrast button */
-            color: white; /* Low contrast with background */
+            background-color: red; /* Low contrast */
+            color: white;
         }
-        img {
-            max-width: 100%; /* Responsive but missing alt */
+        /* Example of inconsistent identification */
+        .nav-link {
+            font-size: 1.2em; /* Inconsistent font size */
         }
     </style>
 </head>
@@ -33,10 +37,10 @@
         <h1>Welcome to Our Sample Site</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
             </ul>
         </nav>
     </header>
@@ -69,7 +73,7 @@
             <h2>Our Services</h2>
             <p>We offer various services to help you succeed.</p>
             <ul>
-                <li><span>Consulting</span> <!-- No semantic element or link -->
+                <li><span>Consulting</span></li> <!-- No meaningful content -->
                 <li><span>Development</span></li>
             </ul>
         </section>
@@ -79,7 +83,27 @@
             <p>This section is purely text with no headings.</p>
         </section>
 
-        <button>Click Me</button> <!-- Low contrast button -->
+        <button>Click Me</button> <!-- Low contrast -->
+
+        <section>
+            <h2>Non-Text Content</h2>
+            <img src="image.jpg" alt=""> <!-- Missing alt text -->
+            <p>Below is a decorative image:</p>
+            <img src="decorative.jpg" alt=""/> <!-- Decorative image, but still missing alt text -->
+        </section>
+
+        <section>
+            <h2>Link Purpose</h2>
+            <p><a href="#services">Click here</a> to learn more.</p> <!-- Vague link text -->
+        </section>
+
+        <section>
+            <h2>Meaningful Sequence</h2>
+            <p>Follow us on our social media:</p>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a> <!-- Lack of context for links -->
+        </section>
     </main>
 
     <footer>
