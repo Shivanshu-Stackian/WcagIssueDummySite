@@ -47,6 +47,11 @@
             </ul>
           </div>
         </nav>
+    
+    <!-- New WCAG Issue: Sensory Characteristics -->
+    <label style="color: red;">Select your favorite color:</label>
+    <input type="text" placeholder="Type your favorite color here"><br/><br/>
+
         <h2>The fieldset element</h2>
         <form action="/action_page.php">
             <fieldset>
@@ -92,8 +97,6 @@
 
             <label id="disk_d"></label>
             <input type="radio" aria-labelledby="Python">
-
-
             <meter id="disk_d" value="0.6">60%</meter>
             <br/>
             <br/>
@@ -131,21 +134,17 @@
 
         <br>
         <a href="/read">Learn more</a>
-
-        
         <div>
             aria-braille-equivalent
             <button aria-braillelabel="tush">DJ</button>
             </br></br></br>
         </div>
 
-
         <div>
             aria-conditional-attr
             <input type="checkbox" aria-checked="true">gggh</textarea>
             </br></br></br>
         </div>
-
 
         <div>
             aria-deprecated-role
@@ -165,7 +164,6 @@
             </br></br></br>
         </div>
 
-
         <div>
             no-autoplay-audio
             <!-- <audio controls>
@@ -174,24 +172,22 @@
             </audio> -->
             <!-- <audio controls> 
                 <source src= 
-        "https://media.geeksforgeeks.org/wp-content/uploads/20230524142525/gfg_offline_classes_en.mp3"
-                        type="audio/mp3"> 
+                "https://media.geeksforgeeks.org/wp-content/uploads/20230524142525/gfg_offline_classes_en.mp3"
+                    type="audio/mp3"> 
                 <source src= 
-        "https://media.geeksforgeeks.org/wp-content/uploads/20220913101124/audiosample.ogg"
-                        type="audio/mp3"> 
+                "https://media.geeksforgeeks.org/wp-content/uploads/20220913101124/audiosample.ogg"
+                    type="audio/mp3"> 
             </audio>  -->
-        </br></br></br>
+            </br></br></br>
         </div>
-
 
         <div>
-        empty-table-header
-        <table>
-        <th><th>
-            <tr>Empty row header</tr>
-        </table></br></br></br>
+            empty-table-header
+            <table>
+                <th><th>
+                    <tr>Empty row header</tr>
+            </table></br></br></br>
         </div>
-
 
         <h3>REMOVED RULES</h3>
         <div>
@@ -199,7 +195,7 @@
             <p aria-roledescription="my paragraph" id="fail1">paragraph</p>
             </br></br></br>
         </div>
-        
+
         <div>   
             audio-caption
             <audio>
@@ -212,11 +208,10 @@
             duplicate-id
             <p id="abc" class="abc">Lorem ipsum with some text.</p>
             <div style="display: none;">
-            <p id="abc">some paragraph text with another para text.</p>
+                <p id="abc">some paragraph text with another para text.</p>
             </div>
             </br></br></br>
         </div>
-
 
         <h2>Non Ally Engine Experimental Rules</h2>
         <div>
@@ -224,7 +219,6 @@
             <p><b><i>Para heading</i></b></p>
             <p>A paragraph, A paragraph!</p>
         </div>
-
 
         <div>
             label-content-name-mismatch
@@ -259,16 +253,15 @@
 
         <img src="chatgpt.png">
         <br><br>
-        <iframe src="iframe.html">
-        </iframe>
+        <iframe src="iframe.html"></iframe>
         <br><br>
         <img src="a11yicon.png" alt="Image" width="180" height="180">
         <br><br>
         <!-- Show-password rule violation -->
         Email: <input type="text" placeholder="Enter your email here" id="myEmail"><br><br>
         Password: <input type="password" value="abcd" id="myPassword"><br><br>
-        </main>
+    </main>
     <footer>
     </footer>
     </body>
-</html>
+    </html>
