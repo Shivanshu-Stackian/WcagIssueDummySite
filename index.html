@@ -181,6 +181,8 @@
             </br></br></br>
         </div>
 
+        
+
         <div>
             empty-table-header
             <table>
@@ -260,6 +262,62 @@
         <!-- Show-password rule violation -->
         Email: <input type="text" placeholder="Enter your email here" id="myEmail"><br><br>
         Password: <input type="password" value="abcd" id="myPassword"><br><br>
+        ...existing code...
+<iframe srcdoc="
+    <html>
+        <head>
+            <title>Iframe with WCAG Violations</title>
+        </head>
+        <body>
+            <!-- WCAG SC 4.1.2 Violation: Missing accessible name for the button -->
+            <div>
+                <button></button> <!-- Button without accessible name -->
+            </div>
+
+            <!-- WCAG SC 4.1.2 Violation: Incorrect ARIA role -->
+            <div role='invalidrole'>This div has an invalid ARIA role.</div>
+
+            <!-- WCAG SC 4.1.2 Violation: Mismatched ARIA attributes -->
+            <input type='text' aria-labelledby='nonexistent-id' />
+
+            <!-- WCAG SC 4.1.2 Violation: Missing label for form control -->
+            <input type='checkbox' />
+
+        </body>
+    </html>
+" width="600" height="400" style="border: 1px solid black;"></iframe>
+...existing code...
+
+...existing code...
+
+<!-- Shadow DOM container -->
+<div id="shadow-host"></div>
+
+<script>
+    // Create a Shadow DOM
+    const shadowHost = document.getElementById('shadow-host');
+    const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+
+    // Add content to the Shadow DOM
+    shadowRoot.innerHTML = `
+        <div>
+            <!-- WCAG SC 4.1.2 Violation: Missing accessible name for the button -->
+            <button></button> <!-- Button without accessible name -->
+
+            <!-- WCAG SC 4.1.2 Violation: Incorrect ARIA role -->
+            <div role="invalidrole">This div has an invalid ARIA role.</div>
+
+            <!-- WCAG SC 4.1.2 Violation: Mismatched ARIA attributes -->
+            <input type="text" aria-labelledby="nonexistent-id" />
+
+            <!-- WCAG SC 4.1.2 Violation: Missing label for form control -->
+            <input type="checkbox" />
+        </div>
+    `;
+</script>
+
+...existing code...
+
     </main>
     <footer>
     </footer>
